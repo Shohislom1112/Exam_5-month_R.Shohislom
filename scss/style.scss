@@ -1,0 +1,22 @@
+@use "base" as *;
+@use "pages" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1440px;
+}
+a {
+  text-decoration: none;
+}
+// body {
+//   // padding-top: 700px;
+// }
+main {
+  padding-top: 0;
+}
