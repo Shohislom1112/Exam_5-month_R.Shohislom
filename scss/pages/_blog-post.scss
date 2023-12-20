@@ -1,1 +1,50 @@
-@use '../base' as *;
+@use "../base" as *;
+.cards {
+  .card {
+    .img {
+      img {
+        width: 1100px;
+        height: 586px;
+        flex-shrink: 0;
+        justify-content: center;
+        padding: 56px 80px;
+      }
+
+      .text {
+        span {
+          color: var(--Purple, #592ea9);
+
+          /* Heading H3 */
+          font-family: Sen;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 40px; /* 142.857% */
+          letter-spacing: -1px;
+        }
+        h1 {
+          color: var(--Black, #232536);
+
+          /* Heading H1 */
+          font-family: Sen;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 64px; /* 133.333% */
+          letter-spacing: -2px;
+          width: 843px;
+        }
+        p {
+          width: 50px;
+          color: var(--Medium-grey, #6d6e76);
+          /* Body 1 */
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 175% */
+        }
+      }
+    }
+  }
+}

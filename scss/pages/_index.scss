@@ -1,7 +1,28 @@
-@forward 'register';
-@forward 'login';
-@forward 'home';
-@forward 'category';
-@forward 'all-posts';
-@forward 'blog-post';
-@forward 'about';
+@forward "register";
+@forward "login";
+@forward "home";
+@forward "category";
+@forward "all-posts";
+@forward "blog-post";
+@forward "about";
+
+main {
+  .input {
+    padding-left: 300px;
+    padding-top: 130px;
+
+    .in {
+      display: flex;
+      width: 768px;
+      padding: 24px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 2px;
+      border: 1px solid rgba(109, 110, 118, 0.5);
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      //   padding-left: 300px;
+    }
+  }
+}
