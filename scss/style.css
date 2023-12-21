@@ -40,7 +40,7 @@ header nav .nav_items .nav-items .item-link {
   line-height: 24px; /* 150% */
 }
 header nav .nav_items .nav-items .item-link:hover {
-  color: 13;
+  color: 4;
 }
 header nav .nav_items .nav-items .clone {
   border-color: white;
@@ -539,4 +539,11 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 28px; /* 175% */
+}
+
+.btn {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: red;
 }/*# sourceMappingURL=style.css.map */

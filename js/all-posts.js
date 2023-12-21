@@ -1,83 +1,39 @@
-// const postDiv = document.querySelector(".posts");
+const postDiv = document.querySelector(".posts");
 
-// async function getPostsAPI() {
-//   try {
-//     let res = await fetch(`http://localhost:3000/posts`);
-//     let data = await res.json();
-//     pushPosts(data);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// getPostsAPI();
-
-// function pushPosts(users) {
-//   let str = "";
-
-//   users.map((user) => {
-//     str += `
-//               <a href="./blog-post.html" onclick="getPost(${user.id})" class="post">
-//                 <div class="card">
-//                 <div class="post_img">
-//                   <img src="${user.image}" alt="">
-//                 </div>
-//                 <div class="post_text">
-//                   <span>${user.category}</span>
-//                   <h2>${user.title}</h2>
-//                   <p>${user.description}</p>
-//                   <h3>${user.author}</h3>
-//                 </div>
-//                 </div>
-//               </a>
-//           `;
-//   });
-//   postDiv.innerHTML = str;
-// }
-
-const postCard = document.querySelector(".cards");
-const infosList = document
-  .getElementById("cards")
-  .getElementsByClassName("post");
-
-async function getPosts() {
+async function getPostsAPI() {
   try {
-    let rest = await fetch("http://localhost:3000/posts");
-    let date = await rest.json();
-    pushPosts(date);
+    let res = await fetch(`http://localhost:3000/posts`);
+    let data = await res.json();
+    pushPosts(data);
   } catch (error) {
     console.log(error);
   }
 }
 
-getPosts();
+getPostsAPI();
 
-function pushPosts(user) {
-  let Str = "";
+function pushPosts(users) {
+  let str = "";
 
-  user.map((u) => {
-    Str += `
-            <a href="./blog-post.html" onclick="getPost(${u.id})" class="post">
-              <div class="post_img">
-                <img src="${u.image}" alt="">
-              </div>
-              <div class="texts">
-                <p class="category">${u.category}</p>
-                <h2>${u.title}</h2>
-                <p>${u.description}</p>
-                <p class="job">${u.author}</p>
-              </div>
-            </a>
-        `;
+  users.map((user) => {
+    str += `
+  <a href="./blog-post.html" onclick="getPost(${user.id})" class="post">
+    <div class="card">
+    <div class="post_img">
+      <img src="${user.image}" alt="">
+    </div>
+    <div class="post_text">
+      <span>${user.category}</span>
+      <h2>${user.title}</h2>
+      <p>${user.description}</p>
+      <h3>${user.author}</h3>
+    </div>
+    </div>
+  </a>
+          `;
   });
-  postCard.innerHTML = Str;
+  postDiv.innerHTML = str;
 }
-
-function getPost(id) {
-  localStorage.setItem("userId", id);
-  console.log(id);
-
-
 
 // search /////////////////////////////////////////////////////////
 const searchInput = document.getElementById("search");
