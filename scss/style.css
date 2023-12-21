@@ -40,7 +40,7 @@ header nav .nav_items .nav-items .item-link {
   line-height: 24px; /* 150% */
 }
 header nav .nav_items .nav-items .item-link:hover {
-  color: 9;
+  color: 13;
 }
 header nav .nav_items .nav-items .clone {
   border-color: white;
@@ -342,12 +342,9 @@ main {
   padding-top: 150px;
   display: block;
 }
-main .input {
-  padding: 20px;
-}
 main .input .search {
   display: flex;
-  width: 1180px;
+  width: 999px;
   padding: 24px;
   align-items: center;
   gap: 10px;
